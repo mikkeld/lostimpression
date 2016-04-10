@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
+    <meta name="description" content="">
+    <meta name="author" content="">    
+
+    <title>Carousel Template for Bootstrap</title>
+
+    <!-- Bootstrap core CSS -->
+    <link href="http://v4-alpha.getbootstrap.com/dist/css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- Custom styles for this template -->
+    <link href="carousel.css" rel="stylesheet">
+  </head>
+  <body>
+
+    <nav class="navbar navbar-static-top navbar-light bg-faded">
+      <a href="#" class="navbar-brand">Carousel</a>
+      <ul class="nav navbar-nav">
+        <li class="nav-item active">
+          <a class="nav-link" href="#">Home <span class="sr-only">(current)</span></a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="#">Features</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="#">Pricing</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="#">About</a>
+        </li>
+      </ul>
+    </nav>
+
+    <!-- Marketing messaging and featurettes
+    ================================================== -->
+    <!-- Wrap the rest of the page in another container to center all the content. -->
+
+    <div class="calculator-wrapper">
+    <span class="tip-header">Ad block impact calculator</span>
+    <h6 class="top_padding">Calculate impact on your site from ad blocking</h6>
+
+    <form> 
+      <div class="form-group">
+      <select id="country-select" class="form-control">
+        <option>Select country</option>
+        <option value=0.209>Austria</option>
+        <option value=0.12>Belgium</option>
+        <option value=0.16>Bulgaria</option>
+        <option value=0.192>Croatia</option>
+        <option value=0.143>Cyprus</option>
+        <option value=0.109>Czech Republic</option>
+        <option value=0.233>Denmark</option>
+        <option value=0.253>Estonia</option>
+        <option value=0.193>Finland</option>
+        <option value=0.103>France</option>
+        <option value=0.253>Germany</option>
+        <option value=0.375>Greece</option>
+        <option value=0.232>Hungary</option>
+        <option value=0.177>Ireland</option>
+        <option value=0.129>Italy</option>
+        <option value=0.147>Latvia</option>
+        <option value=0.192>Lithuania</option>
+        <option value=0.137>Luxembourg</option>
+        <option value=0.277>Malta</option>
+        <option value=0.139>Netherlands</option>
+        <option value=0.349>Poland</option>
+        <option value=0.208>Portugal</option>
+        <option value=0.18>Romania</option>
+        <option value=0.089>Slovakia</option>
+        <option value=0.193>Slovenia</option>
+        <option value=0.16>Spain</option>
+        <option value=0.251>Sweden</option>
+        <option value=0.211>UK</option>   
+      </select>
+      </div>
+      <div class="form-group">
+      <select id="industry-select" class="form-control">
+        <option>Select industry</option>
+        <option value=1.0>Other</option>
+        <option value=0.72>Automobile</option>
+        <option value=0.32>Charity</option>
+        <option value=1.09>Education</option>
+        <option value=0.86>Financial services</option>
+        <option value=1.71>Gaming</option>
+        <option value=0.16>Government/Legal</option>
+        <option value=0.35>Health</option>
+        <option value=0.34>Personal/Dating</option>
+        <option value=0.45>Political</option>
+        <option value=0.32>Real estate</option>
+        <option value=0.65>Food/Dining</option>
+        <option value=0.68>Search engine/Portal</option>
+        <option value=1.23>Social networking</option>
+        <option value=1.0>Sports/Recreation</option>
+        <option value=1.1>Tech/Internet</option>
+        <option value=0.45>Travel</option>
+        </select>
+      </div>
+      <div class="form-group">
+        <label for="exampleInputEmail1">Revenue from ads in 2015</label>
+        <input type="input" id="ad-revenue" class="form-control" placeholder="Example: 35000">
+      </div>
+      <div class="form-group">
+        <label for="exampleInputEmail1">% of revenue from mobile</label>
+        <input type="input" id="mobile-percentage" class="form-control" placeholder="Example: 40%">
+      </div>
+       <button type="button" id="calculate-button" class="btn btn-primary btn-lg">Calculate</button>
+    </form>
+    <div class="calculator-result">
+    <p id="calculator-result" class="bg-danger space"></p>
+    </div>
+
+    </div>
+      <!-- FOOTER -->
+      <footer>
+        <p class="pull-xs-right"><a href="#">Back to top</a></p>
+        <p>&copy; 2014 Company, Inc. &middot; <a href="#">Privacy</a> &middot; <a href="#">Terms</a></p>
+      </footer>
+
+    </div><!-- /.container -->
+
+
+    <!-- Bootstrap core JavaScript
+    ================================================== -->
+    <!-- Placed at the end of the document so the pages load faster -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
+    <script>window.jQuery || document.write('<script src="../../assets/js/vendor/jquery.min.js"><\/script>')</script>
+    <script src="http://v4-alpha.getbootstrap.com/dist/js/bootstrap.min.js"></script>
+    <!-- Just to make our placeholder images work. Don't actually copy the next line! -->
+    <script src="http://v4-alpha.getbootstrap.com/assets/js/vendor/holder.min.js"></script>
+    <!-- IE10 viewport hack for Surface/desktop Windows 8 bug -->
+    <script src="http://v4-alpha.getbootstrap.com/assets/js/ie10-viewport-bug-workaround.js"></script>
+
+
+    <script>
+    $(document).ready(function(){
+      $("#calculator-result").hide();
+      $("#calculate-button").click(function(){
+        var country = $("#country-select").val();
+        var industry = $("#industry-select").val();
+        var ad_revenue = $("#ad-revenue").val();
+        var mobile_percentage = parseFloat($("#mobile-percentage").val())/100.0;
+        var percentage_blocked = country * industry * (1 - mobile_percentage);
+        var lost_ad_revenue_2015 = percentage_blocked * ad_revenue;
+        $("#calculator-result").show();
+        if($.isNumeric(percentage_blocked) && $.isNumeric(lost_ad_revenue_2015)) {
+          $("#calculator-result").text("In 2015 you lost " + lost_ad_revenue_2015.toFixed(2) + " due to ad blocking with " + (percentage_blocked * 100.0).toFixed(2) + "% of ads being blocked");
+        } else {
+          $("#calculator-result").text("All the inputs above must be filled out correctly");
+        }
+        
+        //$("#calculator-result").text()
+      });
+    });
+
+    </script>
+
+  </body>
+</html>

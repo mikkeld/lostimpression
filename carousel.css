@@ -1,0 +1,187 @@
+/* GLOBAL STYLES
+-------------------------------------------------- */
+/* Padding below the footer and lighter body text */
+
+body {
+  padding-bottom: 3rem;
+}
+
+/* Custom CSS */
+.logo {
+  float:left;
+  position: relative;
+  top: 1px;
+  color: #fff;
+  /*font-family: 'HelveticaNeueW01-75Bold','HelveticaNeue Bold','Helvetica LT Std Bold',Helvetica;*/
+  letter-spacing: -1.5px;
+  font-size: 30px;
+  vertical-align: middle;
+  line-height: 40px;
+  font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+  font-weight:600;
+  color:#2795eb;
+}
+
+.logo span {
+  /*font-family: 'HelveticaNeueW01-45Light','Helvetica LT Std Light','Helvetica Neue LT Std',Helvetica;*/
+  font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+  font-weight:100;
+  color:white;
+}
+
+.navbar {
+  border-radius: 0px;
+}
+
+a.nav-custom-link {
+  display: block;
+  color:white;
+  padding-top: .425rem;
+  padding-bottom: .425rem;
+}
+
+.float-right {
+  float: right;
+}
+
+h1, h2, h3, h4, h5, h6, p, div, i {
+    -webkit-font-smoothing: antialiased;
+}
+
+.bg-black {
+  background-color: black;
+}
+
+.top_padding {
+  padding-top: 20px;
+}
+
+.calculator-wrapper {
+  padding: 5px 25px 5px 25px;
+  border: 1px solid;
+  border-radius: 5px;
+  position:relative;
+  border-color: #E6E6E6;
+  display: inline-block;
+  background-color: #F0F2F2;
+  margin-bottom: 20px;
+  width:300px;
+}
+
+.bg-danger {
+  padding: 5px 5px 5px 5px;
+}
+
+.smaller {
+  font-size: 80%;
+}
+
+.calculator-result {
+  padding: 20px 2px 2px 2px;
+}
+
+span.tip-header {
+  font-size: small;
+  color:#5bc0de;
+  font-weight: bold;
+}
+
+
+
+/* CUSTOMIZE THE CAROUSEL
+-------------------------------------------------- */
+
+/* Carousel base class */
+.carousel {
+  margin-bottom: 4rem;
+}
+/* Since positioning the image, we need to help out the caption */
+.carousel-caption {
+  z-index: 10;
+}
+
+/* Declare heights because of positioning of img element */
+.carousel-item {
+  height: 32rem;
+  background-color: #777;
+}
+.carousel-item > img {
+  position: absolute;
+  top: 0;
+  left: 0;
+  min-width: 100%;
+  height: 32rem;
+}
+
+.carousel-indicators {
+  top: 1.5rem;
+  right: 1.5rem;
+  bottom: auto;
+  left: auto;
+  width: 1rem;
+  margin-left: 0;
+}
+
+.carousel-indicators > li {
+  margin-bottom: .25rem;
+}
+
+
+/* MARKETING CONTENT
+-------------------------------------------------- */
+
+/* Center align the text within the three columns below the carousel */
+.marketing .col-lg-4 {
+  margin-bottom: 1.5rem;
+  text-align: center;
+}
+.marketing h2 {
+  font-weight: normal;
+}
+.marketing .col-lg-4 p {
+  margin-right: .75rem;
+  margin-left: .75rem;
+}
+
+
+/* Featurettes
+------------------------- */
+
+.featurette-divider {
+  margin: 5rem 0; /* Space out the Bootstrap <hr> more */
+}
+
+/* Thin out the marketing headings */
+.featurette-heading {
+  font-weight: 300;
+  line-height: 1;
+  letter-spacing: -.05rem;
+  padding-top: 20px;
+}
+
+
+/* RESPONSIVE CSS
+-------------------------------------------------- */
+
+@media (min-width: 40em) {
+  /* Bump up size of carousel content */
+  .carousel-caption p {
+    margin-bottom: 1.25rem;
+    font-size: 1.25rem;
+    line-height: 1.4;
+  }
+
+  .calculator-wrapper {
+    width:400px;
+  }
+
+  .featurette-heading {
+    font-size: 50px;
+  }
+}
+
+/*@media (min-width: 62em) {
+  .featurette-heading {
+    margin-top: 7rem;
+  }
+}*/
